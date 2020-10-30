@@ -53,7 +53,7 @@ namespace Playtech.Controllers
             {
                 await _employeeService.UpdateEmployee(employee);
             }
-            catch (NotFoundException e)
+            catch (NotFoundException)
             {
                 return NotFound();
             }
@@ -78,7 +78,7 @@ namespace Playtech.Controllers
             {
                 deletedEmployee = await _employeeService.DeleteEmployee(id);
             }
-            catch (NotFoundException e)
+            catch (NotFoundException)
             {
                 return NotFound();
             }
