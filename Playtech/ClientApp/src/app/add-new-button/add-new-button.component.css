@@ -1,0 +1,14 @@
+button.add-new-button {
+    position: fixed;
+    bottom: 40px;
+    right: 55px;
+}
+
+button.add-new-button mat-icon {
+    transition-duration: 400ms;
+}
+
+button.add-new-button:hover mat-icon {
+    transition-duration: 400ms;
+    transform: rotate(180deg);
+}

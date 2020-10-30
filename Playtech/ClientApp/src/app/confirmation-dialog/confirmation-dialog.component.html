@@ -1,0 +1,8 @@
+<div mat-dialog-content>
+  <p>{{data.question}}</p>
+  <p class="description" *ngIf="!!(data.description)">{{data.description}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="primary" (click)="onOkClick()">{{data.action ? data.action.toUpperCase() : "OK"}}</button>
+  <button mat-flat-button (click)="onCancelClick()">CANCEL</button>
+</div>

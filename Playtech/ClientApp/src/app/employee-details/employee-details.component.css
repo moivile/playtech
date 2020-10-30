@@ -1,0 +1,13 @@
+.form-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-toolbar.mat-toolbar-single-row {
+  margin: 0 20px;
+  width: auto;
+}
+
+.page-toolbar button {
+  margin-right: 25px;
+}

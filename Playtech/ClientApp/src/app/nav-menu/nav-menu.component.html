@@ -1,0 +1,31 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <h1>Playtech</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]="{ show: isExpanded }">
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item" >
+
+            <button mat-flat-button type="button" routerLink="/" routerLinkActive="link-active">
+              <mat-icon>home</mat-icon>
+              Home
+            </button>
+          </li>
+          <li class="nav-item">
+            <button mat-flat-button type="button" routerLink="/employees" routerLinkActive="link-active">
+              <mat-icon>person</mat-icon>
+              Employees
+            </button>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

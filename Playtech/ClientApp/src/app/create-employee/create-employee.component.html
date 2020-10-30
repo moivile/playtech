@@ -1,0 +1,42 @@
+<h1 mat-dialog-title>Create employee</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div class="form-fields" mat-dialog-content>
+
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Salary</mat-label>
+      <input matInput type="number" min="1" step="any" formControlName="salary">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Department</mat-label>
+      <mat-select formControlName="departmentId" required>
+        <mat-option *ngFor="let department of departments" [value]="department.id">
+          {{department.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="departmentId.invalid">You must select a department</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Manager</mat-label>
+      <mat-select formControlName="managerId" required>
+        <mat-option *ngFor="let manager of managers" [value]="manager.id">
+          {{manager.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="managerId.invalid">You must select a manager</mat-error>
+    </mat-form-field>
+
+
+
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [disabled]="!form.valid" type="submit" color="primary">SAVE</button>
+    <button mat-button (click)="onCloseClick()" type="button">CLOSE</button>
+  </div>
+</form>

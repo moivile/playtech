@@ -1,0 +1,38 @@
+.filters-wrapper {
+  max-width: 1050px;
+  margin-left: 50px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filters-wrapper mat-form-field,
+.filters-wrapper mat-checkbox {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+.search-result {
+  margin: 20px;
+  margin-top: 0;
+  padding-top: 0;
+  max-width: 700px;
+}
+.search-result mat-paginator {
+  max-width: 600px;
+}
+
+td.mat-cell,
+th.mat-header-cell {
+  font-size: 11px;
+  padding: 2px 7px;
+}
+
+/* This allows the ripple effect to extend beyond the cell. */
+.mat-column-select {
+  overflow: initial;
+}
+
+:host ::ng-deep.mat-paginator .mat-paginator-container {
+  padding-right: 55px;
+}

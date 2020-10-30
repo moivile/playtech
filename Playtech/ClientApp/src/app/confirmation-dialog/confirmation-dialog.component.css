@@ -1,0 +1,9 @@
+.mat-dialog-actions button:first-child {
+    margin-left: auto;
+    margin-right: 12px;
+
+}
+
+.description {
+    font-style: italic;
+}
